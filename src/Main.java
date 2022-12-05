@@ -3,6 +3,15 @@ public class Main {
 
         int[] arr = generateRandomArray();
 
+
+        // Задача 1
+        int summary = 0;
+
+        for (final int current : arr)
+            summary += current;
+
+        System.out.println("Сумма трат за месяц составила " + summary + " рублей");
+
     }
 
     public static int[] generateRandomArray() {
