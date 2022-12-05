@@ -3,7 +3,6 @@ public class Main {
 
         int[] arr = generateRandomArray();
 
-
         // Задача 1
         int summary = 0;
 
@@ -12,6 +11,19 @@ public class Main {
 
         System.out.println("Сумма трат за месяц составила " + summary + " рублей");
 
+        // Разделитель
+        System.out.println();
+
+        // Задача 2
+        int min = arr[0];
+        int max = arr[0];
+
+        for (final int current : arr) {
+            min = (min < current) ? min : current;
+            max = (max > current) ? max : current;
+        }
+
+        System.out.println("Минимальная сумма трат за день составила " + min + " рублей. Максимальная сумма трат за день составила " + max + " рублей");
     }
 
     public static int[] generateRandomArray() {
